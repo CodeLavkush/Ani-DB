@@ -1,10 +1,16 @@
-const express = require('express')
+import express from 'express';
+import Anime from './models/anime.js'
+import mongoose from 'mongoose';
+
 const app = express()
 const port = 3000
 
+await mongoose.connect("mongodb://localhost:27017/data");
 
+app.use(express.urlencoded({extended: true}))
 app.use(express.static('public'));
 app.set('view engine', 'ejs');
+app.use(express.json());
 
 app.get('/', (req, res) => {
   res.render('../views/home.ejs')
@@ -16,6 +22,17 @@ app.get('/featured', (req, res)=>{
 
 app.get('/form', (req, res)=>{
   res.render('../views/form.ejs')
+})
+
+app.post('/form', async (req, res)=>{
+    try{
+      const anime = new Anime({title: req.body.title, genre: req.body.genre, episodes: req.body.episodes, seasons: req.body.seasons, poster: req.body.poster});
+      anime.save();
+      res.redirect('/form');
+  }
+  catch(error){
+      res.redirect('/form');
+  }
 })
 
 app.listen(port, () => {
