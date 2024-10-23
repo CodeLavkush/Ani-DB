@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form DB | Ani-DB</title>
+    <link rel="stylesheet" href="/css/root.css">
+    <link rel="stylesheet" href="/css/form.css">
+</head>
+<body>
+    <%- include('navbar.ejs') %>
+    <div class="big-container">
+        <div class="big-form">
+            <form class="main-form" action="/form" method="POST">
+                <h3>Submit Your Anime Info</h3>
+                <input class="title" type="text" name="title" required placeholder="Enter Title">
+                <input class="genre" type="text" name="genre" required placeholder="Enter Genre">
+                <input class="episodes" type="text" name="episodes" required placeholder="Enter Total Episodes">
+                <input class="seasons" type="text" name="seasons" required placeholder="Enter Total Seasons">
+                <input class="poster" type="text" name="poster" required placeholder="Enter Poster Link">
+                <button class="subBTn" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="small-container">
+        <div class="small-form">
+            <form class="main-form" action="/form" method="POST">
+                <h3>Submit Your Anime Info</h3>
+                <input class="title" type="text" name="title" required placeholder="Enter Title">
+                <input class="genre" type="text" name="genre" required placeholder="Enter Genre">
+                <input class="episodes" type="text" name="episodes" required placeholder="Enter Total Episodes">
+                <input class="seasons" type="text" name="seasons" required placeholder="Enter Total Seasons">
+                <input class="poster" type="text" name="poster" required placeholder="Enter Poster Link">
+                <button class="subBTn" type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
