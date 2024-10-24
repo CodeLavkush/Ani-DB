@@ -3,8 +3,8 @@ import mongoose from "mongoose";
 const AnimeSchema = new mongoose.Schema({
     title: String,
     genre: String,
-    episodes: String,
-    seasons: String,
+    episodes: Number,
+    seasons: Number,
     poster: String,
 });
 

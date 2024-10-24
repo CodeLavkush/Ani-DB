@@ -24,6 +24,17 @@ app.get('/form', (req, res)=>{
   res.render('../views/form.ejs')
 })
 
+app.get('/api/anime-data', async (req, res)=>{
+  try{
+    const animeData = await Anime.find();
+    res.json(animeData);
+  }
+  catch(err)
+  {
+    res.status(500).json({ error: 'Internal server error' });
+  }
+})
+
 app.post('/form', async (req, res)=>{
     try{
       const anime = new Anime({title: req.body.title, genre: req.body.genre, episodes: req.body.episodes, seasons: req.body.seasons, poster: req.body.poster});
