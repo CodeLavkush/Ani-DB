@@ -17,7 +17,7 @@ async function card(){
     
             let cardContainer = document.querySelector('.home-container');
     
-            cardContainer += cardHTML;
+            cardContainer.innerHTML += cardHTML;
         }
     }
     catch(error){
@@ -26,4 +26,3 @@ async function card(){
 }
 
 card()
-console.log(card())

@@ -1,7 +1,7 @@
 body{
     overflow-x: hidden;
 }
-.container{
+.home-container{
     text-align: center;
     width: 100vw;
     height: 59rem;
@@ -10,7 +10,7 @@ body{
     gap: .1rem;
 }
 
-.container .card {
+.home-container .card {
     background-image: linear-gradient(to right, rgb(48, 48, 48), rgb(43, 43, 43));
     width: 14rem;
     height: 20rem; 
@@ -29,18 +29,18 @@ body{
     font-size: .8rem;
 }
 
-.container .card:hover{
+.home-container .card:hover{
     scale: 1.1;
     border: .01rem solid white;
 }
 
-.container .card .poster{
+.home-container .card .poster{
     width: 80%;
     height: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.container .card .poster img{
+.home-container .card .poster img{
     width: 60%;
 }
