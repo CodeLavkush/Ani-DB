@@ -1,7 +1,7 @@
 async function card(){
 
     try{
-        let response = await fetch("http://localhost:3000/api/anime-data");
+        let response = await fetch();
         let data = await response.json()
 
         for(let i = 0; i < data.length; i++){

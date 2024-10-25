@@ -5,7 +5,7 @@ import mongoose from 'mongoose';
 const app = express()
 const port = 3000
 
-await mongoose.connect("mongodb://localhost:27017/data");
+await mongoose.connect(`${process.env.DBKEY}`);
 
 app.use(express.urlencoded({extended: true}))
 app.use(express.static('public'));
