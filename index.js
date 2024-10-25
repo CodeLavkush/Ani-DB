@@ -1,5 +1,5 @@
 import express from 'express';
-import Anime from './models/anime.js'
+import Anime from './models/Anime.js'
 import mongoose from 'mongoose';
 
 const app = express()
