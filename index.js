@@ -3,7 +3,7 @@ import Anime from './models/Anime.js'
 import mongoose from 'mongoose';
 
 const app = express()
-const port = 3000
+const port = 3000;
 
 await mongoose.connect(`${process.env.DBKEY}`);
 

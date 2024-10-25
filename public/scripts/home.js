@@ -1,7 +1,7 @@
 async function card(){
 
     try{
-        let response = await fetch();
+        let response = await fetch("https://ani-db.onrender.com/api/anime-data");
         let data = await response.json()
 
         for(let i = 0; i < data.length; i++){
